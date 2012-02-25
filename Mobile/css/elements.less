@@ -4,6 +4,7 @@ elements
 	-fonts
 	-anchors	
 	-lists
+	-tables
 */
 	
 	/*fonts*/
@@ -16,6 +17,27 @@ elements
 	p{color:@bodycolor;font-size:1em;line-height:1.5em;}
 	sub{}
 	small{}
-	/*@*/
+	/*@-@*/
+	
+	/*anchors*/
+	
+	/*@-@*/
+	
+	/*lists*/
+	
+	/*@-@*/
+	
+	/*tables*/
+	table{text-align:left;width:100%}
+		thead{background:#d0d0d0;font-weight:600;padding:5px;}
+			th{border-right:1px solid #c0c0c0;border-bottom:1px solid #d0d0d0;padding:10px;white-space:nowrap;}
+				th:last-child{border-right:none;}
+		tbody{background:#f9f9f9;font-weight:100;}
+			tr{border-bottom:1px solid #f0f0f0;padding:10px 0;}
+				tr:hover{background:#f0f0f0;}
+			td{border-right:1px solid #c0c0c0;padding:10px;}
+				td:last-child{border-right:none;}
+				td:hover{background:#c9c9c9;}
+	/*@-@*/
 	
 /*@--@*/
