@@ -7,11 +7,20 @@ modules
 	$(function()
 		{
 			var table=$('table');
+			var tableinstructionswidth=
 			$(table)
 				.wrap('<div class="tablecontainer">')
 					$('.tablecontainer')
-						.append('<span class="tableinstructions">Swipe to browse</span>')
-						.after('<!-- @.tablecontainer-->');
+						.append('<div class="tableinstructions">Swipe to browse</div><!-- @.tableinstructions-->')
+						.after('<!-- @.tablecontainer-->')
+						.end();
+						if(table.width() > ($('.tablecontainer').width()))
+							{
+								$('.tableinstructions')
+									.css('display','block')
+								$(table)
+									.css('margin-left',$('.tableinstructions').width());
+							}
 		}
 	);
 	/*@-@*/
