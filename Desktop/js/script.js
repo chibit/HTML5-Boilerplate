@@ -10,6 +10,7 @@ modules
 			$(table)
 				.wrap('<div class="tablecontainer">')
 					$('.tablecontainer')
+						.append('<span class="tableinstructions">Swipe to browse</span>')
 						.after('<!-- @.tablecontainer-->');
 		}
 	);
