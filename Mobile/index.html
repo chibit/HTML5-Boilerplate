@@ -6,12 +6,12 @@
 <head>
   	<meta charset="utf-8">
 
-  	<title></title>
+  	<title>HTML5 Boilerplate Mobile</title>
   	<meta name="description" content="">
 
   	<meta name="HandheldFriendly" content="True">
   	<meta name="MobileOptimized" content="320">
-  	<meta name="viewport" content="width=device-width">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
 
   	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
   	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
@@ -28,60 +28,95 @@
   
   	<meta http-equiv="cleartype" content="on">
 
-  	<link href="css/style.css" rel="stylesheet/less">
-
+  	<link href="css/style.less" rel="stylesheet/less">
+	
+	<link href="css/jquery.mobile-1.0.1.min.css" rel="stylesheet" >
+	
   	<script src="js/libs/less-1.2.1.min.js"></script>
-
-  	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+	
+	<script src="js/libs/phonegap-1.4.1.js"></script>
+	
+  	<script src="js/libs/modernizr-2.0.min.js"></script>
 </head>
 
 <body>
 
-<div id="container">
-	
-	<header id="siteheader">
-	
-		<div class="wrapper">
-			<h1 id="logo">Logo</h1>
-			<h2>Heading</h2>
-			<p>Test</p>
+<div data-role="page" data-title="Home" id="home">
+
+	<div id="container">
+		
+		<header data-position="fixed" data-role="header" id="siteheader">
+		
+			<div class="wrapper">
+				<h1>Smiling Zebra</h1>
+				
+				<a data-direction="reverse" data-rel="back" data-role="button">Back</a>
+				
+			</div>
+			<!-- @.wrapper-->
+			
+		</header>
+		<!-- @#siteheader<header>-->
+		
+		<div data-role="content" id="main" role="main">
+			
+			<div class="wrapper">	
+				<a data-rel="dialog" data-role="button" data-icon="something" data-transition="pop" href="#dialog">Dialog</a>
+				<p>
+					Lorem ipsum dolar sit amet consectutor dolar sit amet constantinople ipsum dolar sit amet consectutor dolar sit amet constantinople
+					ipsum dolar sit amet consectutor dolar sit amet constantinople ipsum dolar sit amet consectutor dolar sit amet constantinople
+					ipsum dolar sit amet consectutor dolar sit amet constantinople ipsum dolar sit amet consectutor dolar sit amet constantinople
+				</p>
+			</div>
+			<!-- @.wrapper-->
+			
 		</div>
-		<!-- @.wrapper-->
+		<!-- @#main<content>-->
 		
-	</header>
-	<!-- @#siteheader-->
-	
-	<div id="main" role="main">
-		
-		<div class="wrapper">
-		
-		</div>
-		<!-- @.wrapper-->
+		<footer data-position="fixed" data-role="footer" id="sitefooter">
+			
+			<div class="wrapper">
+				
+				<div data-iconpos="top" data-role="navbar">
+					<ul>
+						<li><a data-icon="home" href="#">Home</a></li>
+						<li><a data-icon="star" href="#">Dialogs</a></li>
+						<li><a data-icon="info" href="#">Other</a></li>
+						<li><a data-icon="search" href="#">Test</a></li>
+					</ul>
+				</div>
+				<!-- @<navbar>-->
+			</div>
+			<!-- @.wrapper-->
+			
+		</footer>
+		<!-- @#sitefooter<footer>-->
 		
 	</div>
-	<!-- @#main-->
-	
-	<footer id="sitefooter">
-		
-		<div class="wrapper">
-		
-		</div>
-		<!-- @.wrapper-->
-		
-	</footer>
-	<!-- @#sitefooter-->
-	
+	<!-- @#container-->
+
 </div>
-<!-- @#container-->
+<!-- @#home<page>-->
+
+<div data-role="dialog" data-title="Dialog" id="dialog">
+	
+	<div data-role="header">
+		<h1 role="heading">Hello</h1>
+	</div>
+	<!-- @<header>-->
+	
+	<div data-role="content">
+		<h2>This is a test of the jQuery Mobile library in iOS and WebKit</h2>
+		<p>Testing dialogs and seeing what the dealeo is!</p>
+		<a data-rel="back" data-role="button">Close</a>
+	</div>
+	<!-- @<content>-->
+</div>
+<!-- @#home<page>-->
 
 
-  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-
-  	<!-- scripts concatenated and minified via ant build script -->
-  	<script src="js/helper.js"></script>
-  	<!-- end concatenated and minified scripts-->
-
+  	<script src="js/libs/jquery-1.6.2.min.js"></script>
+	<script src="js/libs/jquery.mobile-1.0.1.min.js"></script>
   	<!-- <script src="https://getfirebug.com/firebug-lite.js"></script> -->
 
   	<script> // Change UA-XXXXX-X to be your site's ID
