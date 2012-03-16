@@ -1,4 +1,14 @@
 /*
+initializations
+*/
+	
+	/*proquo-min.js*/
+	$('.quote').proQuo()
+	/*@-@*/
+	
+/*@--@*/
+
+/*
 modules
 */
 
@@ -15,27 +25,27 @@ modules
 			$(table)
 				.wrap('<div class="inner">')
 				
-				$(table).parent('.inner')
+				$(table).parent(inner)
 					.wrap('<div class="tablecontainer">')
 					.after('<!-- @.inner-->')
 					.end();
 					
-					$('.tablecontainer')
+					$(tablecontainer)
 						.append('<div class="tableinstructions"></div><!-- @.tableinstructions-->')
 						.after('<!-- @.tablecontainer-->')
 						.end();
 						
-						$('.tablecontainer')
+						$(tablecontainer)
 							.each(function(i)
 								{
 									if($(this).find(table).width() > ($(this).width()))
 										{
 											$(this)
-												.find('.tableinstructions')
+												.find(tableinstructions)
 													.css('display','block')
 											$(this)
-												.find('.inner')
-													.css('margin-right',$('.tableinstructions').width());
+												.find(inner)
+													.css('margin-right',$(tableinstructions).width());
 										}
 								}
 							);
